@@ -63,7 +63,7 @@ function loadFile(sex) {
         }
 
     // For display
-    console.log(hosp, mortal);
+    console.log(hosp);
     return [hosp, mortal]
     }
 }
