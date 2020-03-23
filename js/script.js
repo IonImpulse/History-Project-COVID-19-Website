@@ -34,7 +34,8 @@ function getResults(sex, age) {
 
 function loadFile(sex) {
     var name = ""
-    
+    self.hosp = [];
+    self.mortal = [];
     if (sex == "male") {    
         name = "data/regressed_male_calculator_data.csv"
     } else {
@@ -46,24 +47,20 @@ function loadFile(sex) {
         url: name,
         dataType: "text",
         success: function(data) {processData(data);}
-        });
+    });
 
     // Let's process the data from the data file
     function processData(data) {
         var lines = data.split(/\r\n|\n/);
 
-        //Set up the data arrays
-        var hosp = [];
-        var mortal = [];
-
         for (var j=0; j<lines.length; j++) {
         var values = lines[j].split(','); // Split up the comma seperated values
-           hosp.push(parseFloat(values[0])); 
-           mortal.push(parseFloat(values[1]));
+           self.hosp.push(parseFloat(values[0])); 
+           self.mortal.push(parseFloat(values[1]));
         }
 
     // For display
     }
-    console.log(hosp);
-    return [hosp, mortal]
+    console.log(self.hosp);
+    return [self.hosp, self.mortal]
 }
