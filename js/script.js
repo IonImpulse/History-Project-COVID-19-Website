@@ -23,23 +23,25 @@ function isInt(value) {
 }
 function getResults(sex, age) {
     var data = loadFile(sex);
-    var hosp_num = data[0][age]
-    var mortal_num = data[1][age]
+    var hosp_num = data[0][age];
+    var mortal_num = data[1][age];
+    
 
     hosp_num = Math.round(hosp_num * 100);
     mortal_num = Math.round(mortal_num * 100);
 
+    console.log("Relative chance of hospitalization: " + toString(hosp_num) + "\nRelative change of death: " + toString(mortal_num));
     return "Relative chance of hospitalization: " + toString(hosp_num) + "\nRelative change of death: " + toString(mortal_num);
 }
 
 function loadFile(sex) {
-    var name = ""
+    var name = "";
     self.hosp = [];
     self.mortal = [];
     if (sex == "male") {    
-        name = "data/regressed_male_calculator_data.csv"
+        name = "data/regressed_male_calculator_data.csv";
     } else {
-        name = "data/regressed_female_calculator_data.csv"
+        name = "data/regressed_female_calculator_data.csv";
     }
 
     $.ajax({
@@ -59,8 +61,7 @@ function loadFile(sex) {
            self.mortal.push(parseFloat(values[1]));
         }
 
-    // For display
+        console.log(data);
     }
-    console.log(self.hosp);
-    return [self.hosp, self.mortal]
+    return [self.hosp, self.mortal];
 }
