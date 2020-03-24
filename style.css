@@ -14,6 +14,11 @@ body {
 h3 {
     font-size:70px;
 }
+h4 {
+    font-size:40px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
 small {
     font-style: italic;
 }
@@ -59,10 +64,10 @@ select {
     background-color: #494949;
     transition: box-shadow .1s ease-in-out;
 }
-select:hover{
+select:focus{
     box-shadow:inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5);
 }
-input[type=button], input[type=submit]{
+button{
     background-color: rgb(76, 122, 175);
     border: none;
     color: white;
@@ -74,6 +79,6 @@ input[type=button], input[type=submit]{
     margin:auto;
     display:block;
 }
-input[type=button], input[type=submit]:hover{
+button:hover{
     box-shadow:inset 0px 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
