@@ -57,9 +57,15 @@ function getResults(sex, age) {
     var hosp_num = hosp[parseInt(age)];
     var mortal_num = mortal[parseInt(age)];
 
-    hosp_num = Math.round(hosp_num * 100);
-    mortal_num = Math.round(mortal_num * 100);
+    hosp_num = Math.round(hosp_num);
+    mortal_num = Math.round(mortal_num);
 
+    if (hosp_num < 0) {
+        hosp_num = 0;
+    }
+    if (mortal_num < 0) {
+        mortal_num = 0;
+    }
     console.log("Relative chance of hospitalization: " + hosp_num.toString() + "%\nRelative chance of death: " + mortal_num.toString() + "%");
     return "Relative chance of hospitalization: " + hosp_num.toString() + "%<br>Relative chance of death: " + mortal_num.toString() + "%";
 }
