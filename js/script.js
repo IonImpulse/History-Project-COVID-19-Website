@@ -67,5 +67,5 @@ function getResults(sex, age) {
         mortal_num = 0;
     }
     console.log("Relative chance of hospitalization: " + hosp_num.toString() + "%\nRelative chance of death: " + mortal_num.toString() + "%");
-    return "Relative chance of hospitalization: " + hosp_num.toString() + "%<br>Relative chance of death: " + mortal_num.toString() + "%";
+    return "Percentile rank for hospitalization: " + hosp_num.toString() + "%<br>Percentile rank for death: " + mortal_num.toString() + "%";
 }
