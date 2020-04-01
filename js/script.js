@@ -23,6 +23,24 @@ function isInt(value) {
     return (x | 0) === x;
 }
 
+function getRangeAndColor(level) {
+    var output = "";
+
+    if (level < 20) {
+        output = "Very Low".fontcolor("ForestGreen");
+    } else if (level < 40) {
+        output = "Low".fontcolor("GreenYellow");
+    } else if (level < 60) {
+        output = "Moderate".fontcolor("Gold");
+    } else if (level < 80) {
+        output = "High".fontcolor("FireBrick");
+    } else {
+        output = "Very High".fontcolor("Maroon");
+    }
+
+    return output;
+}
+
 
 function getResults(sex, age) {
     var name = "";
@@ -59,13 +77,18 @@ function getResults(sex, age) {
 
     hosp_num = Math.round(hosp_num);
     mortal_num = Math.round(mortal_num);
-
+    
     if (hosp_num < 0) {
         hosp_num = 0;
     }
     if (mortal_num < 0) {
         mortal_num = 0;
     }
-    console.log("Relative chance of hospitalization: " + hosp_num.toString() + "%\nRelative chance of death: " + mortal_num.toString() + "%");
-    return "Percentile rank for hospitalization: " + hosp_num.toString() + "%<br>Percentile rank for death: " + mortal_num.toString() + "%";
+
+    hosp_num = getRangeAndColor(hosp_num);
+    mortal_num = getRangeAndColor(mortal_num);
+
+
+    console.log("Risk of contracting COVID-19: " + hosp_num + "\nRisk of death: " + mortal_num);
+    return "Risk of contracting COVID-19: " + hosp_num + "<br>Risk of death: " + mortal_num;
 }
