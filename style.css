@@ -9,15 +9,23 @@ body {
     background-color: #222;
     color: #e6e6e6;
     border-color: #e6e6e6;
-    letter-spacing: .1em;
+    letter-spacing: .1em; 
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s; /* Safari */
+
 }
-h3 {
+p {
+    font-size: 30px;
+}
+h2 {
     font-size:70px;
 }
 h4 {
     font-size:40px;
     color: #e6e6e6;
     background-color: rgb(71, 71, 71);
+    transition: all .1s ease-in-out;
 }
 small {
     font-style: italic;
@@ -27,10 +35,13 @@ article {
     flex-direction: column;
 }
 img {
-    max-width: 100%;
+    max-width: 120%;
     display: block;
     align-self: center;
+    padding: 20px;
+    transition: 0.3s;
 }
+
 @font-face {
     font-family: 'geosanslightregular';
     src: url('fonts/geosanslight-webfont.woff2') format('woff2'),
@@ -81,4 +92,39 @@ button{
 }
 button:hover{
     box-shadow:inset 0px 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+  
+  /* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+ }
+  
+  /* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+  
+  /* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#results {
+    transition: opacity .5s ease-in-out;
 }

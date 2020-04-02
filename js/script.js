@@ -10,7 +10,12 @@ function returnResults() {
             return false;
         } else {
             console.log(sex, age);
-            document.getElementById("results").innerHTML = getResults(sex, age);            
+            var project = document.querySelector('#results');
+            project.style.opacity = 0;
+            setTimeout(function() {
+                document.getElementById("results").innerHTML = getResults(sex, age);
+                project.style.opacity = 1;
+            },500);
         }
     }
 }
@@ -48,9 +53,9 @@ function getResults(sex, age) {
     var mortal = [];
     
     if (sex == "male") {    
-        name = "https://ionimpulse.github.io/History-Project-COVID-19-Website/data/regressed_male_calculator_data.csv";
+        name = "https://raw.githubusercontent.com/IonImpulse/History-Project-COVID-19-Website/master/data/regressed_male_calculator_data.csv";
     } else {
-        name = "https://ionimpulse.github.io/History-Project-COVID-19-Website/data/regressed_female_calculator_data.csv";
+        name = "https://raw.githubusercontent.com/IonImpulse/History-Project-COVID-19-Website/master/data/regressed_female_calculator_data.csv";
     }
 
     $.ajax({
@@ -89,6 +94,6 @@ function getResults(sex, age) {
     mortal_num = getRangeAndColor(mortal_num);
 
 
-    console.log("Risk of contracting COVID-19: " + hosp_num + "\nRisk of death: " + mortal_num);
-    return "Risk of contracting COVID-19: " + hosp_num + "<br>Risk of death: " + mortal_num;
+    console.log("Risk of contracting COVID-19: " + hosp_num + "\nRisk of death if infected: " + mortal_num);
+    return "Risk of contracting COVID-19: " + hosp_num + "<br>Risk of death if infected: " + mortal_num;
 }

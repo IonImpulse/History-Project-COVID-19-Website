@@ -2,17 +2,21 @@
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
-  
   <title>COVID-19 Calculator</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body >
+<body onload="document.body.style.opacity='1'">
+  <div class="navbar">
+    <a href="index.html">Calculator</a>
+    <a href="pages/articles.html">Articles</a>
+    <a href="pages/about.html">About</a>   
+  </div> 
   <div>
     <form name="mainform" class="form-horizontal well" onsubmit="return false" method="GET">
       <legend>
-        <h3>
+        <h2>
           <div id="title">COVID-19 Calculator</div>
-        </h3>
+        </h2>
       </legend>
       <div class="row">
         <label for="sex">Biological Sex:</label>
