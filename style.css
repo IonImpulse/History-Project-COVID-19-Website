@@ -9,8 +9,8 @@ body {
     border-color: #e6e6e6;
     letter-spacing: .1em; 
     opacity: 0;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s; /* Safari */
+    transition: opacity .5s;
+    -webkit-transition: opacity .5s; /* Safari */
 }
 p {
     font-size: 30px;
