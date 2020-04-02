@@ -71,7 +71,7 @@ article {
     flex-direction: column;
 }
 img {
-    max-width: 70rem;
+    max-width: 50rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
