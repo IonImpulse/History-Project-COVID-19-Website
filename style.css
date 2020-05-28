@@ -1,39 +1,69 @@
 body {
-    font-family: 'geosanslightregular', Geo Sans Light, sans-serif;
-    font-size: 1.125rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     background-color: #222;
     color: #e6e6e6;
     border-color: #e6e6e6;
-    letter-spacing: .1em; 
-    opacity: 0;
     transition: opacity .5s;
     -webkit-transition: opacity .5s; /* Safari */
 }
+
 p {
-    font-size: 30px;
+    font-size: 20px;
+    line-height: 40px;
     max-width: 50rem;
     width: 50rem;
     margin: 0 auto;
+    text-align: left;
+}
+
+p1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size:30px;
+    color: #e6e6e6;
+    font-weight: normal;
+    background-color: rgb(71, 71, 71);
+}
+
+p2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
     text-align: center;
 }
-a:link {
-    color: rgb(114, 170, 207);
-}
-a:visited {
-    color: rgb(114, 170, 207);
-}
-p1 {
+
+p3 {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     color: rgb(163, 70, 70);
-    font-family: 'Courier New', Courier, monospace;
     max-width: 50rem;
     width: 50rem;
     margin: 0 auto;
     text-align: center;
 }
+
+p4 {
+    font-size: 30px;
+}
+
+p5 {
+    font-size: 15px;
+}
+h1 {
+    font-size:70px;
+    font-family: Hallo-Sans;
+    font-weight: bold;
+    background-color: #494949;
+    text-align: center;
+    width:45rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    max-width: 45rem;
+}
+
 article {
     max-width: 60rem;
     width: 60rem;
@@ -48,23 +78,14 @@ h2 {
     font-weight: bold;
     background-color: #494949;
     text-align: center;
-    width:45rem;
+    width:60rem;
     margin: 0 auto;
     margin-top: 5rem;
-    margin-bottom: 2rem;
-    max-width: 45rem;
-}
-p2 {
-    font-size: 20px;
+    margin-bottom: 4rem;
     max-width: 60rem;
-    width: 60rem;
-    margin: 0 auto;
-    text-align: left;
-    align-self: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: normal;
-    line-height: 40px;
+
 }
+
 h3 {
     font-size: 30px;
     max-width: 60rem;
@@ -81,6 +102,44 @@ h4 {
     background-color: rgb(71, 71, 71);
     transition: all .1s ease-in-out;
 }
+
+
+a:link {
+    color: rgb(114, 170, 207);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a:visited {
+    color: rgb(114, 170, 207);
+}
+
+
+
+
+@font-face {
+    font-family: Hallo-Sans; 
+    font-weight: normal; 
+    src: url('fonts/Hallo-sans.otf'); 
+} 
+
+@font-face { 
+    font-family: Hallo-Sans; 
+    font-weight: bold; 
+    src: url('fonts/Hallo-sans-black.otf'); 
+
+} 
+@font-face {
+    font-family: 'geosanslightregular';
+    src: url('fonts/geosanslight-webfont.woff2') format('woff2'),
+         url('fonts/geosanslight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
 small {
     font-style: italic;
 }
